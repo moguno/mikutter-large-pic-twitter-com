@@ -2,7 +2,7 @@
 
 module Gtk
   class << self
-    alias openurl_org openurl
+    alias openurl_large_image openurl
 
     def openurl(url)
       xurl = if url =~ /^http:\/\/pbs\.twimg\.com\//
@@ -11,7 +11,7 @@ module Gtk
         url
       end
 
-      openurl_org(xurl)
+      openurl_large_image(xurl)
     end
   end
 end
